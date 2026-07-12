@@ -1,0 +1,45 @@
+name: Feature proposal
+description: Propose a user problem worth solving
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Describe the problem before proposing a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What should become easier, safer, or clearer?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Possible solution
+      description: Optional. Explain the smallest useful version.
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Expected frequency of use
+      options:
+        - Daily
+        - Weekly
+        - Monthly
+        - Occasionally
+        - One-time setup
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Product constraints
+      options:
+        - label: The proposal can preserve offline operation.
+        - label: The proposal can preserve user privacy.
+        - label: The proposal has a clear benefit beyond visual novelty.
