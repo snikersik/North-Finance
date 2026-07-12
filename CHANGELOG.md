@@ -10,6 +10,11 @@ begin.
 
 ### Added
 
+- Native `NorthFinance` Xcode project targeting macOS 14.
+- SwiftUI application shell with sidebar navigation for Overview, Transactions,
+  Budgets, Goals, Assets, and Settings.
+- Placeholder views for every initial application section.
+- `NorthFinanceTests` unit test target covering the initial navigation model.
 - Initial product vision and principles.
 - Architecture and conceptual data-model foundations.
 - Design-system foundations.
