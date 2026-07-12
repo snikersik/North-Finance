@@ -18,6 +18,9 @@
 		AA0000000000000000001009 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000001109 /* AssetsView.swift */; };
 		AA0000000000000000001010 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000001110 /* SettingsView.swift */; };
 		AA0000000000000000001011 /* AppSectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000001111 /* AppSectionTests.swift */; };
+		AA0000000000000000001012 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000001112 /* DesignTokens.swift */; };
+		AA0000000000000000001013 /* FinancialAmountStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000001113 /* FinancialAmountStyle.swift */; };
+		AA0000000000000000001014 /* SummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000001114 /* SummaryCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		AA0000000000000000001109 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
 		AA0000000000000000001110 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AA0000000000000000001111 /* AppSectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSectionTests.swift; sourceTree = "<group>"; };
+		AA0000000000000000001112 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
+		AA0000000000000000001113 /* FinancialAmountStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialAmountStyle.swift; sourceTree = "<group>"; };
+		AA0000000000000000001114 /* SummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCard.swift; sourceTree = "<group>"; };
 		AA0000000000000000001201 /* NorthFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NorthFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0000000000000000001202 /* NorthFinanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorthFinanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,6 +119,9 @@
 		AA0000000000000000000106 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				AA0000000000000000001112 /* DesignTokens.swift */,
+				AA0000000000000000001113 /* FinancialAmountStyle.swift */,
+				AA0000000000000000001114 /* SummaryCard.swift */,
 				AA0000000000000000001104 /* PlaceholderFeatureView.swift */,
 			);
 			path = DesignSystem;
@@ -233,6 +242,9 @@
 				AA0000000000000000001008 /* GoalsView.swift in Sources */,
 				AA0000000000000000001009 /* AssetsView.swift in Sources */,
 				AA0000000000000000001010 /* SettingsView.swift in Sources */,
+				AA0000000000000000001012 /* DesignTokens.swift in Sources */,
+				AA0000000000000000001013 /* FinancialAmountStyle.swift in Sources */,
+				AA0000000000000000001014 /* SummaryCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

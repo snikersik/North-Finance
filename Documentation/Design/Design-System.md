@@ -36,11 +36,56 @@ than hard-coded values.
 - compact, regular, and spacious layout metrics;
 - corner radii, shadows, and motion durations.
 
+## Implemented foundations
+
+The first design-system layer lives in `NorthFinance/DesignSystem` and exposes
+semantic SwiftUI values. Feature views should consume these names rather than
+selecting visual values directly.
+
+### Colors
+
+`NorthColor` maps semantic roles to adaptive macOS system colors. The mappings
+automatically respond to light mode, dark mode, increased contrast, accent-color
+selection, and other system appearance settings.
+
+| Role | Token |
+| --- | --- |
+| Window background | `NorthColor.background` |
+| Standard surface | `NorthColor.surface` |
+| Elevated surface | `NorthColor.elevatedSurface` |
+| Primary text | `NorthColor.primaryText` |
+| Secondary text | `NorthColor.secondaryText` |
+| Tertiary text | `NorthColor.tertiaryText` |
+| Accent and selection | `NorthColor.accent`, `NorthColor.selection` |
+| Positive, caution, destructive | `NorthColor.positive`, `NorthColor.caution`, `NorthColor.destructive` |
+| Separator and focus | `NorthColor.separator`, `NorthColor.focus` |
+
+Status colors must be paired with a text label, icon, or other non-color cue.
+The colors are not final brand values.
+
+### Layout metrics
+
+- `NorthSpacing.compact`: 8 points;
+- `NorthSpacing.regular`: 16 points;
+- `NorthSpacing.spacious`: 24 points;
+- `NorthRadius.control`: 8 points;
+- `NorthRadius.card`: 12 points;
+- `NorthRadius.panel`: 16 points.
+
+`NorthLayout` contains reusable structural measurements that should not be
+repeated in feature views, including the minimum summary-card width and maximum
+content width.
+
 ## Typography
 
 Use the system typography stack (SF family on Apple platforms) through semantic
 styles. Financial amounts require tabular digits where comparison benefits from
 stable alignment. Do not encode hierarchy solely through font weight.
+
+`NorthTypography` currently provides semantic page-title, card-title, body,
+secondary, and financial-amount fonts. The `financialAmountStyle()` modifier
+applies the financial amount typography and tabular digits while preserving
+Dynamic Type behavior. Custom font files are not used.
 
 ## Core components
 
@@ -56,6 +101,17 @@ vertical slice:
 - amount, currency, category, and date fields;
 - empty, loading, error, and privacy-hidden states;
 - accessible chart legend and data table alternative.
+
+### Summary card
+
+`SummaryCard` is the first implemented reusable component. It accepts a
+localizable title and arbitrary SwiftUI content, applies the standard card
+surface, separator, padding, and radius tokens, and contains no financial
+business logic. The Overview screen demonstrates it with neutral em-dash values
+only; it does not create or simulate financial records.
+
+The Overview previews cover light appearance, dark appearance, and an
+accessibility Dynamic Type size.
 
 ## Motion
 
