@@ -1,0 +1,47 @@
+name: Bug report
+description: Report reproducible incorrect behavior in North Finance
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach real financial records, credentials, account numbers, or other sensitive data.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use anonymized or sample values.
+      placeholder: |
+        1. Open …
+        2. Select …
+        3. Observe …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: North Finance version or commit
+      placeholder: v0.3.0 or commit SHA
+  - type: input
+    id: system-version
+    attributes:
+      label: macOS or iOS version
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional anonymized context
