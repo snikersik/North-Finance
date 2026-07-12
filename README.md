@@ -55,5 +55,3 @@ an explicit rationale recorded in the repository.
 
 No open-source license has been granted. All rights are reserved unless a future
 decision states otherwise.
-# North-Finance
-A premium personal finance platform for the Apple ecosystem. Built with privacy, performance and simplicity in mind
