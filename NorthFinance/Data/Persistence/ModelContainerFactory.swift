@@ -11,10 +11,15 @@ enum ModelContainerFactory {
     }
 
     static func makeInMemoryContainer() throws -> ModelContainer {
-        let configuration = ModelConfiguration(isStoredInMemoryOnly: true)
+        let schema = Schema(versionedSchema: NorthFinanceSchemaV1.self)
+        let configuration = ModelConfiguration(
+            schema: schema,
+            isStoredInMemoryOnly: true
+        )
 
         return try ModelContainer(
-            for: TransactionRecord.self,
+            for: schema,
+            migrationPlan: NorthFinanceMigrationPlan.self,
             configurations: configuration
         )
     }
