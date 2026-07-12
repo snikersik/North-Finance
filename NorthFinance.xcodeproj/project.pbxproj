@@ -21,6 +21,18 @@
 		AA0000000000000000001012 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000001112 /* DesignTokens.swift */; };
 		AA0000000000000000001013 /* FinancialAmountStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000001113 /* FinancialAmountStyle.swift */; };
 		AA0000000000000000001014 /* SummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000001114 /* SummaryCard.swift */; };
+		BB0000000000000000001001 /* CurrencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001101 /* CurrencyCode.swift */; };
+		BB0000000000000000001002 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001102 /* Money.swift */; };
+		BB0000000000000000001003 /* TransactionKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001103 /* TransactionKind.swift */; };
+		BB0000000000000000001004 /* FinancialTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001104 /* FinancialTransaction.swift */; };
+		BB0000000000000000001005 /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001105 /* TransactionRepository.swift */; };
+		BB0000000000000000001006 /* NorthFinanceSchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001106 /* NorthFinanceSchemaV1.swift */; };
+		BB0000000000000000001007 /* NorthFinanceMigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001107 /* NorthFinanceMigrationPlan.swift */; };
+		BB0000000000000000001008 /* ModelContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001108 /* ModelContainerFactory.swift */; };
+		BB0000000000000000001009 /* DecimalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001109 /* DecimalStorage.swift */; };
+		BB0000000000000000001010 /* TransactionPersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001110 /* TransactionPersistenceError.swift */; };
+		BB0000000000000000001011 /* SwiftDataTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001111 /* SwiftDataTransactionRepository.swift */; };
+		BB0000000000000000001012 /* TransactionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001112 /* TransactionRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +60,18 @@
 		AA0000000000000000001112 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
 		AA0000000000000000001113 /* FinancialAmountStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialAmountStyle.swift; sourceTree = "<group>"; };
 		AA0000000000000000001114 /* SummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCard.swift; sourceTree = "<group>"; };
+		BB0000000000000000001101 /* CurrencyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCode.swift; sourceTree = "<group>"; };
+		BB0000000000000000001102 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		BB0000000000000000001103 /* TransactionKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionKind.swift; sourceTree = "<group>"; };
+		BB0000000000000000001104 /* FinancialTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialTransaction.swift; sourceTree = "<group>"; };
+		BB0000000000000000001105 /* TransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
+		BB0000000000000000001106 /* NorthFinanceSchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NorthFinanceSchemaV1.swift; sourceTree = "<group>"; };
+		BB0000000000000000001107 /* NorthFinanceMigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NorthFinanceMigrationPlan.swift; sourceTree = "<group>"; };
+		BB0000000000000000001108 /* ModelContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerFactory.swift; sourceTree = "<group>"; };
+		BB0000000000000000001109 /* DecimalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalStorage.swift; sourceTree = "<group>"; };
+		BB0000000000000000001110 /* TransactionPersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPersistenceError.swift; sourceTree = "<group>"; };
+		BB0000000000000000001111 /* SwiftDataTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTransactionRepository.swift; sourceTree = "<group>"; };
+		BB0000000000000000001112 /* TransactionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepositoryTests.swift; sourceTree = "<group>"; };
 		AA0000000000000000001201 /* NorthFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NorthFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0000000000000000001202 /* NorthFinanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorthFinanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000105 /* App */,
+				BB0000000000000000000101 /* Domain */,
+				BB0000000000000000000104 /* Data */,
 				AA0000000000000000000106 /* DesignSystem */,
 				AA0000000000000000000107 /* Features */,
 			);
@@ -93,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000001111 /* AppSectionTests.swift */,
+				BB0000000000000000001112 /* TransactionRepositoryTests.swift */,
 			);
 			path = NorthFinanceTests;
 			sourceTree = "<group>";
@@ -146,6 +173,71 @@
 		AA0000000000000000000111 /* Goals */ = {isa = PBXGroup; children = (AA0000000000000000001108 /* GoalsView.swift */,); path = Goals; sourceTree = "<group>"; };
 		AA0000000000000000000112 /* Assets */ = {isa = PBXGroup; children = (AA0000000000000000001109 /* AssetsView.swift */,); path = Assets; sourceTree = "<group>"; };
 		AA0000000000000000000113 /* Settings */ = {isa = PBXGroup; children = (AA0000000000000000001110 /* SettingsView.swift */,); path = Settings; sourceTree = "<group>"; };
+		BB0000000000000000000101 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000000000000000000102 /* Money */,
+				BB0000000000000000000103 /* Transactions */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BB0000000000000000000102 /* Money */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000000000000000001101 /* CurrencyCode.swift */,
+				BB0000000000000000001102 /* Money.swift */,
+			);
+			path = Money;
+			sourceTree = "<group>";
+		};
+		BB0000000000000000000103 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000000000000000001103 /* TransactionKind.swift */,
+				BB0000000000000000001104 /* FinancialTransaction.swift */,
+				BB0000000000000000001105 /* TransactionRepository.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		BB0000000000000000000104 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000000000000000000105 /* Persistence */,
+				BB0000000000000000000107 /* Transactions */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BB0000000000000000000105 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000000000000000000106 /* Schema */,
+				BB0000000000000000001108 /* ModelContainerFactory.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		BB0000000000000000000106 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000000000000000001106 /* NorthFinanceSchemaV1.swift */,
+				BB0000000000000000001107 /* NorthFinanceMigrationPlan.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		BB0000000000000000000107 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000000000000000001109 /* DecimalStorage.swift */,
+				BB0000000000000000001110 /* TransactionPersistenceError.swift */,
+				BB0000000000000000001111 /* SwiftDataTransactionRepository.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,6 +337,17 @@
 				AA0000000000000000001012 /* DesignTokens.swift in Sources */,
 				AA0000000000000000001013 /* FinancialAmountStyle.swift in Sources */,
 				AA0000000000000000001014 /* SummaryCard.swift in Sources */,
+				BB0000000000000000001001 /* CurrencyCode.swift in Sources */,
+				BB0000000000000000001002 /* Money.swift in Sources */,
+				BB0000000000000000001003 /* TransactionKind.swift in Sources */,
+				BB0000000000000000001004 /* FinancialTransaction.swift in Sources */,
+				BB0000000000000000001005 /* TransactionRepository.swift in Sources */,
+				BB0000000000000000001006 /* NorthFinanceSchemaV1.swift in Sources */,
+				BB0000000000000000001007 /* NorthFinanceMigrationPlan.swift in Sources */,
+				BB0000000000000000001008 /* ModelContainerFactory.swift in Sources */,
+				BB0000000000000000001009 /* DecimalStorage.swift in Sources */,
+				BB0000000000000000001010 /* TransactionPersistenceError.swift in Sources */,
+				BB0000000000000000001011 /* SwiftDataTransactionRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0000000000000000001011 /* AppSectionTests.swift in Sources */,
+				BB0000000000000000001012 /* TransactionRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
