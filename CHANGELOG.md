@@ -10,6 +10,12 @@ begin.
 
 ### Added
 
+- Semantic design tokens for adaptive colors, spacing, corner radii, layout,
+  and system typography.
+- Reusable `SummaryCard` component and financial amount text style with tabular
+  digits.
+- Overview summary cards with neutral empty values and light, dark, and
+  accessibility text-size previews.
 - Native `NorthFinance` Xcode project targeting macOS 14.
 - SwiftUI application shell with sidebar navigation for Overview, Transactions,
   Budgets, Goals, Assets, and Settings.
