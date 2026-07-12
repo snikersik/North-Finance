@@ -31,9 +31,10 @@ context used for reporting.
 
 ## Current status
 
-The project is in **Sprint 0 — Foundation**. This repository currently contains
-the product and technical foundations. Application code will be introduced in a
-separate pull request after the foundation is reviewed.
+The project is in **v0.2 — Core application shell**. The repository includes a
+native macOS SwiftUI project with sidebar navigation, placeholder feature views,
+and a unit test target. Persistence and synchronization remain intentionally out
+of scope for this phase.
 
 See:
 
@@ -43,6 +44,31 @@ See:
 - [Architecture overview](Documentation/Architecture/Overview.md)
 - [Design system foundations](Documentation/Design/Design-System.md)
 - [Contributing guide](CONTRIBUTING.md)
+
+## Development
+
+Requirements:
+
+- macOS 14 or later;
+- Xcode with the macOS 14 SDK or later.
+
+Open `NorthFinance.xcodeproj` in Xcode, select the `NorthFinance` scheme, and run
+the macOS target. Command-line verification uses:
+
+```sh
+xcodebuild -project NorthFinance.xcodeproj \
+  -scheme NorthFinance \
+  -destination 'platform=macOS' \
+  build
+
+xcodebuild -project NorthFinance.xcodeproj \
+  -scheme NorthFinance \
+  -destination 'platform=macOS' \
+  test
+```
+
+The application shell has no external dependencies and does not configure
+SwiftData or CloudKit.
 
 ## Repository policy
 
