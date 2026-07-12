@@ -10,6 +10,14 @@ begin.
 
 ### Added
 
+- Domain primitives for supported currencies, transaction kinds, decimal money,
+  and minimal financial transactions.
+- Versioned SwiftData V1 transaction schema with an explicit migration plan and
+  locale-independent canonical decimal storage.
+- Transaction repository boundary with insert, fetch, update, and delete
+  operations plus isolated in-memory persistence tests.
+- Persistent application `ModelContainer` configured only at the composition
+  root without sample financial records.
 - Semantic design tokens for adaptive colors, spacing, corner radii, layout,
   and system typography.
 - Reusable `SummaryCard` component and financial amount text style with tabular
