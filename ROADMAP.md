@@ -30,7 +30,7 @@ future features.
 - Xcode project and macOS target
 - app navigation shell
 - design tokens and core reusable components
-- local SwiftData container
+- [x] versioned local SwiftData transaction container and repository boundary
 - test targets and initial CI
 - localization foundation
 - empty, first-run, loading, and error states
