@@ -2,8 +2,9 @@
 
 ## Status
 
-Proposed foundation for review. Concrete package and target boundaries will be
-validated when the Xcode project is introduced.
+The modular-monolith boundaries are active in the macOS target. The initial
+Domain and Data vertical slice provides local transaction persistence while the
+existing App, DesignSystem, and Features boundaries remain separate.
 
 ## Architectural style
 
@@ -44,6 +45,10 @@ Money, currency, transactions, categories, budgets, goals, liabilities, assets,
 and calculation rules. This is the most stable layer and should be extensively
 unit tested.
 
+The current Domain slice contains `CurrencyCode`, `TransactionKind`, `Money`,
+`FinancialTransaction`, and the `TransactionRepository` protocol. Domain source
+files import Foundation only; they do not depend on SwiftData, SwiftUI, or AppKit.
+
 ### Features
 
 Vertical user-facing slices such as Overview, Transactions, Budgets, Goals,
@@ -56,6 +61,12 @@ SwiftData schemas, repositories, migrations, import/export, and later CloudKit
 configuration. Persistence models may differ from domain types when this protects
 migration safety or testability.
 
+The initial Data slice contains the versioned `NorthFinanceSchemaV1`, an explicit
+`NorthFinanceMigrationPlan`, container factories, and
+`SwiftDataTransactionRepository`. The repository maps persistence records to
+domain values and is the only transaction persistence API exposed to future use
+cases. Feature views must not import SwiftData or use `@Query` directly.
+
 ### Services
 
 Clock, identifiers, exchange rates, files, security, and other system adapters.
@@ -65,8 +76,8 @@ in tests.
 ## State and data flow
 
 - SwiftData is the local source of truth for persisted user records.
-- Views receive query results or presentation state through a clearly owned
-  feature boundary.
+- Views receive presentation state through a clearly owned feature boundary;
+  future transaction use cases will depend on `TransactionRepository`.
 - Writes go through explicit use cases that validate data and related invariants.
 - Derived analytics are recalculated from authoritative records unless profiling
   proves that a cached projection is necessary.
@@ -95,7 +106,6 @@ and exit strategy.
 
 ## Decisions intentionally deferred
 
-- exact SwiftData schema and migration plan;
 - minimum macOS and iOS deployment targets;
 - project generation versus an Xcode-managed project;
 - exchange-rate provider and refresh policy;
@@ -103,3 +113,7 @@ and exit strategy.
 - app-lock and backup implementation.
 
 Each deferred item should become an Issue or ADR before implementation.
+
+The first transaction schema and migration-plan boundary are now implemented.
+Future schema changes must add a new `VersionedSchema` and an explicit migration
+stage rather than modifying V1 in place.
