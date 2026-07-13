@@ -33,7 +33,8 @@ context used for reporting.
 
 The project is in **v0.2 — Core application shell**. The repository includes a
 native macOS SwiftUI project with sidebar navigation, placeholder feature views,
-and a unit test target. Persistence and synchronization remain intentionally out
+a versioned local SwiftData transaction foundation, English and Polish
+localization, and a unit test target. Synchronization remains intentionally out
 of scope for this phase.
 
 See:
@@ -43,6 +44,7 @@ See:
 - [Product principles](Documentation/Product/Principles.md)
 - [Architecture overview](Documentation/Architecture/Overview.md)
 - [Design system foundations](Documentation/Design/Design-System.md)
+- [Localization guide](Documentation/Localization.md)
 - [Contributing guide](CONTRIBUTING.md)
 
 ## Development
@@ -67,8 +69,8 @@ xcodebuild -project NorthFinance.xcodeproj \
   test
 ```
 
-The application shell has no external dependencies and does not configure
-SwiftData or CloudKit.
+The application shell has no external dependencies. SwiftData is configured for
+local persistence; CloudKit is not configured.
 
 ## Repository policy
 

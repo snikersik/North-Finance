@@ -32,7 +32,7 @@ future features.
 - design tokens and core reusable components
 - [x] versioned local SwiftData transaction container and repository boundary
 - test targets and initial CI
-- localization foundation
+- [x] Polish and English localization foundation
 - empty, first-run, loading, and error states
 
 ## v0.3 — Transactions and monthly overview

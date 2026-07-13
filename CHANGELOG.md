@@ -10,6 +10,10 @@ begin.
 
 ### Added
 
+- English development localization and complete Polish localization for the
+  current macOS interface, backed by an Xcode String Catalog.
+- Localization resource tests and contributor guidance for adding future
+  user-facing copy without coupling identifiers or persisted data to language.
 - Domain primitives for supported currencies, transaction kinds, decimal money,
   and minimal financial transactions.
 - Versioned SwiftData V1 transaction schema with an explicit migration plan and

@@ -33,6 +33,8 @@
 		BB0000000000000000001010 /* TransactionPersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001110 /* TransactionPersistenceError.swift */; };
 		BB0000000000000000001011 /* SwiftDataTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001111 /* SwiftDataTransactionRepository.swift */; };
 		BB0000000000000000001012 /* TransactionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001112 /* TransactionRepositoryTests.swift */; };
+		CC0000000000000000001001 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CC0000000000000000001101 /* Localizable.xcstrings */; };
+		CC0000000000000000001002 /* LocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0000000000000000001102 /* LocalizationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		BB0000000000000000001110 /* TransactionPersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPersistenceError.swift; sourceTree = "<group>"; };
 		BB0000000000000000001111 /* SwiftDataTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTransactionRepository.swift; sourceTree = "<group>"; };
 		BB0000000000000000001112 /* TransactionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepositoryTests.swift; sourceTree = "<group>"; };
+		CC0000000000000000001101 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		CC0000000000000000001102 /* LocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTests.swift; sourceTree = "<group>"; };
 		AA0000000000000000001201 /* NorthFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NorthFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0000000000000000001202 /* NorthFinanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorthFinanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000105 /* App */,
+				CC0000000000000000001101 /* Localizable.xcstrings */,
 				BB0000000000000000000101 /* Domain */,
 				BB0000000000000000000104 /* Data */,
 				AA0000000000000000000106 /* DesignSystem */,
@@ -120,6 +125,7 @@
 			children = (
 				AA0000000000000000001111 /* AppSectionTests.swift */,
 				BB0000000000000000001112 /* TransactionRepositoryTests.swift */,
+				CC0000000000000000001102 /* LocalizationTests.swift */,
 			);
 			path = NorthFinanceTests;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				pl,
 				Base,
 			);
 			mainGroup = AA0000000000000000000101;
@@ -315,7 +322,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AA0000000000000000000601 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		AA0000000000000000000601 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (CC0000000000000000001001 /* Localizable.xcstrings in Resources */,); runOnlyForDeploymentPostprocessing = 0; };
 		AA0000000000000000000602 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
@@ -357,6 +364,7 @@
 			files = (
 				AA0000000000000000001011 /* AppSectionTests.swift in Sources */,
 				BB0000000000000000001012 /* TransactionRepositoryTests.swift in Sources */,
+				CC0000000000000000001002 /* LocalizationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
