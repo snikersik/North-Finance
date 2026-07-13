@@ -33,7 +33,7 @@ future features.
 - [x] versioned local SwiftData transaction container and repository boundary
 - [x] test targets and initial CI
 - [x] Polish and English localization foundation
-- empty, first-run, loading, and error states
+- [x] empty, first-run, loading, and error states
 
 ## v0.3 — Transactions and monthly overview
 

@@ -23,6 +23,23 @@ final class LocalizationTests: XCTestCase {
         assertEnglish("Expenses", equals: "Expenses")
         assertEnglish("Available", equals: "Available")
         assertEnglish("No value", equals: "No value")
+        assertEnglish("No data yet", equals: "No data yet")
+        assertEnglish(
+            "Items you add will appear here.",
+            equals: "Items you add will appear here."
+        )
+        assertEnglish("Welcome to North Finance", equals: "Welcome to North Finance")
+        assertEnglish(
+            "Start by adding your first item.",
+            equals: "Start by adding your first item."
+        )
+        assertEnglish("Loading…", equals: "Loading…")
+        assertEnglish("Something went wrong", equals: "Something went wrong")
+        assertEnglish(
+            "Your saved data has not been changed.",
+            equals: "Your saved data has not been changed."
+        )
+        assertEnglish("Try Again", equals: "Try Again")
         assertEnglish(
             "Your income and expenses will appear here.",
             equals: "Your income and expenses will appear here."
@@ -57,6 +74,23 @@ final class LocalizationTests: XCTestCase {
         assertPolish("Expenses", equals: "Wydatki")
         assertPolish("Available", equals: "Dostępne środki")
         assertPolish("No value", equals: "Brak wartości")
+        assertPolish("No data yet", equals: "Brak danych")
+        assertPolish(
+            "Items you add will appear here.",
+            equals: "Dodane elementy pojawią się tutaj."
+        )
+        assertPolish("Welcome to North Finance", equals: "Witaj w North Finance")
+        assertPolish(
+            "Start by adding your first item.",
+            equals: "Zacznij od dodania pierwszego elementu."
+        )
+        assertPolish("Loading…", equals: "Ładowanie…")
+        assertPolish("Something went wrong", equals: "Coś poszło nie tak")
+        assertPolish(
+            "Your saved data has not been changed.",
+            equals: "Zapisane dane nie zostały zmienione."
+        )
+        assertPolish("Try Again", equals: "Spróbuj ponownie")
         assertPolish(
             "Your income and expenses will appear here.",
             equals: "Tutaj pojawią się Twoje przychody i wydatki."

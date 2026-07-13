@@ -99,7 +99,7 @@ vertical slice:
 - category marker;
 - primary, secondary, and destructive actions;
 - amount, currency, category, and date fields;
-- empty, loading, error, and privacy-hidden states;
+- empty, first-run, loading, error, and privacy-hidden states;
 - accessible chart legend and data table alternative.
 
 ### Summary card
@@ -112,6 +112,39 @@ only; it does not create or simulate financial records.
 
 The Overview previews cover light appearance, dark appearance, and an
 accessibility Dynamic Type size.
+
+### Application states
+
+Four reusable presentation components keep common feature states consistent
+without taking ownership of feature workflows:
+
+- `EmptyStateView` communicates that a dataset or result currently contains no
+  items. It supports an optional primary action and is also the presentation
+  used by `PlaceholderFeatureView` while feature data flows are not implemented.
+- `FirstRunStateView` provides a calm introduction before the user has created
+  their first item. It does not persist onboarding state or create sample data.
+- `LoadingStateView` presents an indeterminate native `ProgressView`, a localized
+  accessibility label, and an optional explanatory message. It does not manage
+  timing, cancellation, or navigation.
+- `ErrorStateView` presents a safe, user-readable message with an icon and can
+  expose an optional retry button. It must never receive raw diagnostics or
+  sensitive persistence details as display copy.
+
+Empty and first-run states have different purposes: empty describes the current
+result, while first-run introduces a workflow that has not been used before.
+Error is visually and semantically distinct from both, and loading never claims
+measurable progress.
+
+Primary actions and retry behavior always belong to the parent feature and are
+passed into these views as closures. When no closure is supplied, no button is
+rendered. The components contain no finance rules, persistence queries,
+networking, automatic retry, or navigation logic.
+
+All four components use native SwiftUI controls and the existing semantic color,
+spacing, radius, and typography tokens. Their previews collectively cover
+English and Polish, light and dark appearances, and accessibility Dynamic Type
+sizes. Semantic macOS colors preserve increased-contrast behavior without a
+component-specific appearance override.
 
 ## Motion
 

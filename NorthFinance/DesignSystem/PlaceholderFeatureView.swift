@@ -6,15 +6,11 @@ struct PlaceholderFeatureView: View {
     let message: LocalizedStringResource
 
     var body: some View {
-        ContentUnavailableView {
-            Label {
-                Text(title)
-            } icon: {
-                Image(systemName: systemImage)
-            }
-        } description: {
-            Text(message)
-        }
+        EmptyStateView(
+            title: title,
+            message: message,
+            systemImage: systemImage
+        )
         .navigationTitle(Text(title))
     }
 }
