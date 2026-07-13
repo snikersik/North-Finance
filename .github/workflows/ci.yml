@@ -26,8 +26,6 @@ jobs:
       SCHEME: NorthFinance
       CONFIGURATION: Debug
       DESTINATION: platform=macOS
-      DERIVED_DATA_PATH: ${{ runner.temp }}/NorthFinanceDerivedData
-      TEST_RESULT_PATH: ${{ runner.temp }}/NorthFinanceTests.xcresult
 
     steps:
       - name: Check out repository
@@ -65,7 +63,7 @@ jobs:
             -scheme "$SCHEME" \
             -configuration "$CONFIGURATION" \
             -destination "$DESTINATION" \
-            -derivedDataPath "$DERIVED_DATA_PATH" \
+            -derivedDataPath "${{ runner.temp }}/NorthFinanceDerivedData" \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
@@ -80,8 +78,8 @@ jobs:
             -scheme "$SCHEME" \
             -configuration "$CONFIGURATION" \
             -destination "$DESTINATION" \
-            -derivedDataPath "$DERIVED_DATA_PATH" \
-            -resultBundlePath "$TEST_RESULT_PATH" \
+            -derivedDataPath "${{ runner.temp }}/NorthFinanceDerivedData" \
+            -resultBundlePath "${{ runner.temp }}/NorthFinanceTests.xcresult" \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
@@ -92,6 +90,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: north-finance-test-results-${{ github.run_number }}
-          path: ${{ env.TEST_RESULT_PATH }}
+          path: ${{ runner.temp }}/NorthFinanceTests.xcresult
           retention-days: 7
           if-no-files-found: ignore
