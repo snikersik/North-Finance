@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: macos-26
+    timeout-minutes: 30
+    env:
+      PROJECT: NorthFinance.xcodeproj
+      SCHEME: NorthFinance
+      CONFIGURATION: Debug
+      DESTINATION: platform=macOS
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode 26.6
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          XCODE_PATH="/Applications/Xcode_26.6.app/Contents/Developer"
+          if [[ ! -d "$XCODE_PATH" ]]; then
+            echo "::error title=Xcode 26.6 not found::Expected Xcode at $XCODE_PATH"
+            echo "Available Xcode installations:"
+            find /Applications -maxdepth 1 -type d -name 'Xcode*.app' -print | sort
+            exit 1
+          fi
+
+          sudo xcode-select --switch "$XCODE_PATH"
+
+      - name: Print toolchain versions
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          swift --version
+          xcode-select -p
+
+      - name: Build macOS application
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -configuration "$CONFIGURATION" \
+            -destination "$DESTINATION" \
+            -derivedDataPath "${{ runner.temp }}/NorthFinanceDerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: Run macOS unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -configuration "$CONFIGURATION" \
+            -destination "$DESTINATION" \
+            -derivedDataPath "${{ runner.temp }}/NorthFinanceDerivedData" \
+            -resultBundlePath "${{ runner.temp }}/NorthFinanceTests.xcresult" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            test
+
+      - name: Upload failed test results
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: north-finance-test-results-${{ github.run_number }}
+          path: ${{ runner.temp }}/NorthFinanceTests.xcresult
+          retention-days: 7
+          if-no-files-found: ignore

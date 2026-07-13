@@ -31,7 +31,7 @@ future features.
 - app navigation shell
 - design tokens and core reusable components
 - [x] versioned local SwiftData transaction container and repository boundary
-- test targets and initial CI
+- [x] test targets and initial CI
 - [x] Polish and English localization foundation
 - empty, first-run, loading, and error states
 

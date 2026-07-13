@@ -10,6 +10,8 @@ begin.
 
 ### Added
 
+- GitHub Actions CI for macOS builds and the complete unit test suite using
+  Xcode 26.6, with failed test result bundles retained for diagnostics.
 - English development localization and complete Polish localization for the
   current macOS interface, backed by an Xcode String Catalog.
 - Localization resource tests and contributor guidance for adding future

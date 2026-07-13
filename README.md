@@ -1,5 +1,7 @@
 # North Finance
 
+[![CI](https://github.com/snikersik/North-Finance/actions/workflows/ci.yml/badge.svg)](https://github.com/snikersik/North-Finance/actions/workflows/ci.yml)
+
 North Finance is a privacy-first personal finance application for the Apple
 ecosystem. The first product target is macOS, followed by iPhone and optional
 iCloud synchronization.
