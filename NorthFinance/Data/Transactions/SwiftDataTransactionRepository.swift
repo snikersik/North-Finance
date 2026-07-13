@@ -74,8 +74,15 @@ final class SwiftDataTransactionRepository: TransactionRepository {
     }
 
     private func record(id: UUID) throws -> TransactionRecord? {
-        let descriptor = FetchDescriptor<TransactionRecord>()
-        return try modelContext.fetch(descriptor).first { $0.id == id }
+        let identifier = id
+        var descriptor = FetchDescriptor<TransactionRecord>(
+            predicate: #Predicate { record in
+                record.id == identifier
+            }
+        )
+        descriptor.fetchLimit = 1
+
+        return try modelContext.fetch(descriptor).first
     }
 
     private func mapToDomain(_ record: TransactionRecord) throws -> FinancialTransaction {
