@@ -35,6 +35,11 @@
 		BB0000000000000000001012 /* TransactionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000001112 /* TransactionRepositoryTests.swift */; };
 		CC0000000000000000001001 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CC0000000000000000001101 /* Localizable.xcstrings */; };
 		CC0000000000000000001002 /* LocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0000000000000000001102 /* LocalizationTests.swift */; };
+		DD0000000000000000001001 /* ApplicationStateLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000001101 /* ApplicationStateLayout.swift */; };
+		DD0000000000000000001002 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000001102 /* EmptyStateView.swift */; };
+		DD0000000000000000001003 /* FirstRunStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000001103 /* FirstRunStateView.swift */; };
+		DD0000000000000000001004 /* LoadingStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000001104 /* LoadingStateView.swift */; };
+		DD0000000000000000001005 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000001105 /* ErrorStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,11 @@
 		BB0000000000000000001112 /* TransactionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepositoryTests.swift; sourceTree = "<group>"; };
 		CC0000000000000000001101 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		CC0000000000000000001102 /* LocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTests.swift; sourceTree = "<group>"; };
+		DD0000000000000000001101 /* ApplicationStateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStateLayout.swift; sourceTree = "<group>"; };
+		DD0000000000000000001102 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		DD0000000000000000001103 /* FirstRunStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRunStateView.swift; sourceTree = "<group>"; };
+		DD0000000000000000001104 /* LoadingStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateView.swift; sourceTree = "<group>"; };
+		DD0000000000000000001105 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
 		AA0000000000000000001201 /* NorthFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NorthFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0000000000000000001202 /* NorthFinanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorthFinanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -155,6 +165,11 @@
 				AA0000000000000000001112 /* DesignTokens.swift */,
 				AA0000000000000000001113 /* FinancialAmountStyle.swift */,
 				AA0000000000000000001114 /* SummaryCard.swift */,
+				DD0000000000000000001101 /* ApplicationStateLayout.swift */,
+				DD0000000000000000001102 /* EmptyStateView.swift */,
+				DD0000000000000000001103 /* FirstRunStateView.swift */,
+				DD0000000000000000001104 /* LoadingStateView.swift */,
+				DD0000000000000000001105 /* ErrorStateView.swift */,
 				AA0000000000000000001104 /* PlaceholderFeatureView.swift */,
 			);
 			path = DesignSystem;
@@ -344,6 +359,11 @@
 				AA0000000000000000001012 /* DesignTokens.swift in Sources */,
 				AA0000000000000000001013 /* FinancialAmountStyle.swift in Sources */,
 				AA0000000000000000001014 /* SummaryCard.swift in Sources */,
+				DD0000000000000000001001 /* ApplicationStateLayout.swift in Sources */,
+				DD0000000000000000001002 /* EmptyStateView.swift in Sources */,
+				DD0000000000000000001003 /* FirstRunStateView.swift in Sources */,
+				DD0000000000000000001004 /* LoadingStateView.swift in Sources */,
+				DD0000000000000000001005 /* ErrorStateView.swift in Sources */,
 				BB0000000000000000001001 /* CurrencyCode.swift in Sources */,
 				BB0000000000000000001002 /* Money.swift in Sources */,
 				BB0000000000000000001003 /* TransactionKind.swift in Sources */,

@@ -10,6 +10,10 @@ begin.
 
 ### Added
 
+- Reusable, localized empty, first-run, loading, and recoverable error state
+  components built from native SwiftUI controls and semantic design tokens.
+- English and Polish application-state copy, previews spanning accessibility
+  conditions, and localization coverage for every new string.
 - GitHub Actions CI for macOS builds and the complete unit test suite using
   Xcode 26.6, with failed test result bundles retained for diagnostics.
 - English development localization and complete Polish localization for the
@@ -33,7 +37,8 @@ begin.
 - Native `NorthFinance` Xcode project targeting macOS 14.
 - SwiftUI application shell with sidebar navigation for Overview, Transactions,
   Budgets, Goals, Assets, and Settings.
-- Placeholder views for every initial application section.
+- Placeholder views for every initial application section, now presented through
+  the shared empty-state component without non-functional actions.
 - `NorthFinanceTests` unit test target covering the initial navigation model.
 - Initial product vision and principles.
 - Architecture and conceptual data-model foundations.
